@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded',()=>{
 const imagesButton= document.getElementById('images-button')
-imagesButton.addEventListener('click', ()=> {
+imagesButton.addEventListener('click', (e)=> {
+    e.preventDefault()
     generateImages()
 })
 
@@ -30,6 +31,7 @@ function showImages(shibaImg){
     imgElement.alt='shiba inu images'
     imgContainer.appendChild(imgElement)
    }
+
    
 }
 
