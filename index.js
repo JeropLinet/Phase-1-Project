@@ -15,7 +15,8 @@ imagesButton.addEventListener('mouseout', function() {
     imagesButton.style.backgroundColor = 'plum';
   });
 
-  //fetching images from the API
+
+  //fetching images from API
 function generateImages() {
     fetch('https://shibe.online/api/shibes?count=10')
     .then( res => {
@@ -43,7 +44,7 @@ function showImages(shibaImg){
     imgElement.alt='shiba inu images'
     imgContainer.appendChild(imgElement)
    }
-
+ 
    
 }
 
