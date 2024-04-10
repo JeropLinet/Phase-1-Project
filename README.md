@@ -6,7 +6,7 @@
 #### By Kibet Linet Jerop
 
 ## Description
-This programs allows the user to generate ten images of Shibe Inu Dogs after clicking the "generate Images" button.
+This project is a web application that showcases random images of adorable Shiba Inu dogs. 
 
 ## Installation
 Use git clone to be able to download the files from my github repository using the link provided below.(Installation Instructions)
