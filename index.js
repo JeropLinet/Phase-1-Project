@@ -1,11 +1,15 @@
-document.addEventListener('DOMContentLoaded',()=>{
-    //click event listener to the button
+document.addEventListener('DOMContentLoaded',()=>{ //makes sure the html page loads before any other file.
+
+//click event listener to the button
 const imagesButton= document.getElementById('images-button')
+
 imagesButton.addEventListener('click', (e)=> {
     e.preventDefault()
     generateImages()
 
 })
+
+//mouse over event listener
 imagesButton.addEventListener('mouseover',()=>{
     //changes the button's background color to green when the mouse goes over it.
     imagesButton.style.background ='green'
