@@ -6,7 +6,7 @@
 #### By Kibet Linet Jerop
 
 ## Description
-This project is a web application that showcases random images of adorable Shiba Inu dogs. 
+This project is a web application that showcases random images of adorable Shiba Inu dogs. The user is able to Like or dislike the image..depending on their preferance.
 
 ## Installation
 Use git clone to be able to download the files from my github repository using the link provided below.(Installation Instructions)

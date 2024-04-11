@@ -42,14 +42,44 @@ function showImages(shibaImg){
     const imgContainer= document.getElementById('image-container')
     imgContainer.innerHTML=''
 
-   for( let i=0;i<shibaImg.length;i++){
-    const imgElement = document.createElement('img')
-    imgElement.src=shibaImg[i]
-    imgElement.alt='shiba inu images'
-    imgContainer.appendChild(imgElement)
-   }
+    
+    for (let i = 0; i < shibaImg.length; i++) { //Iterates over the images from the API
+        const imageWrapper = document.createElement('div') 
+        imageWrapper.className = 'image-wrapper'; //to wrap each image
+
+        const imgElement = document.createElement('img');
+        imgElement.src = shibaImg[i];
+        imgElement.alt = 'shiba inu images';
+        imageWrapper.appendChild(imgElement); //appends images to the DOM
+
+        //creation of like and dislike button
+        const likeButton = document.createElement('button'); 
+        likeButton.textContent = 'Like'
+        likeButton.className = 'like-button'
+        likeButton.addEventListener('click', (e) => {
+           e.preventDefault()
+            handleLikeDislike('like')
+            likeButton.style.backgroundColor= 'green'
+        });
+        imageWrapper.appendChild(likeButton)
+
+        const dislikeButton = document.createElement('button')
+        dislikeButton.textContent = 'Dislike'
+        dislikeButton.className = 'dislike-button'
+        
+        dislikeButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            handleLikeDislike('dislike')
+            dislikeButton.style.backgroundColor= 'red'
+        });
+        imageWrapper.appendChild(dislikeButton)
+
+        imgContainer.appendChild(imageWrapper)
+    }
  
    
 }
-
+function handleLikeDislike(action) { //logs actions to the console
+    console.log('Action:', action) 
+}
 })
